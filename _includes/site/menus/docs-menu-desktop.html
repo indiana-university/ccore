@@ -1,0 +1,33 @@
+{% comment %}
+Copyright (C) 2019 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+{% assign documentation = site.documentation | where:"published", true %}
+{% assign docs = documentation | sort: "sortOrder" %}
+<div class="rvt-dropdown">
+    <button class="rvt-dropdown__toggle" data-dropdown-toggle="dropdown-docs" aria-haspopup="true" aria-expanded="false">
+        <span class="rvt-dropdown__toggle-text">Documentation</span>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <title>Dropdown icon</title>
+            <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"
+            />
+        </svg>
+    </button>
+    <div class="rvt-dropdown__menu" id="dropdown-docs" role="menu" aria-hidden="true">
+        {% if page.url == "/start" %}
+        <a aria-current="page" href="/start">Quick start guide</a>
+        {% else %}
+        <a href="/start">Quick start guide</a>
+        {% endif %}
+
+        {% for doc in docs %}
+        {% capture linkURL %}/{{doc.collection}}/{{doc.name}}{% endcapture %}
+        {% if page.url == linkURL %}
+        <a aria-current="page" href="/{{doc.collection}}/{{doc.name}}">{{doc.name | capitalize }}</a>
+        {% else %}
+        <a href="/{{doc.collection}}/{{doc.name}}">{{doc.name | capitalize }}</a>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>

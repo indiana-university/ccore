@@ -1,0 +1,43 @@
+{% comment %}
+Copyright (C) 2019 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+{% assign info = site.documentation | where:'name', page.name | first %}
+{% assign infoName = info.name | capitalize %}
+{% assign pageName = page.name | capitalize %}
+{% assign name = include.name | default: infoName | default: pageName %}
+<div class="rvt-p-lr-xxl-md-up rvt-p-tb-md-md-up rvt-p-lr-sm rvt-p-tb-sm intro-with-toc rvt-container">
+    <div class="rvt-grid rvt-p-lr-xxl-md-up rvt-p-lr-md">
+        <div class="rvt-grid__item-12 rvt-grid__item-8-md-up rvt-p-lr-xxl">
+            <section id="module-{{page.name | downcase}}">
+                {% if name != empty or info.subheading1 != empty or info.subheading2 != empty  %}
+                <header>
+                    {% if name and name != blank %}
+                    <h1>{{ name }}</h1>
+                    {% if info.subHeading1 and info.subHeading1 != empty %}<p class="subheading">{{ info.subHeading1 }}</p>{% endif %}
+                    {% if info.subHeading2 and info.subHeading2 != empty %}<p class="subheading">{{ info.subHeading2 }}</p>{% endif %}
+                    {% else %}
+                    {% if info.subHeading1 and info.subHeading1 != empty %}<h2>{{ info.subHeading1 }}</h2>{% endif %}
+                    {% if info.subHeading2 and info.subHeading2 != empty %}<h2>{{ info.subHeading2 }}</h2>{% endif %}
+                    {% endif %}
+                </header>
+                {% endif %}
+                {% if info.lead and info.lead != empty %}
+                <div class="lead">{{ info.lead | markdownify }}</div>
+                {% endif %}
+                {% if info.content and info.content != empty %}
+                <div class="content">{{ info.content | markdownify }}</div>
+                {% endif %}
+                {% if info.ctaText and info.ctaText != empty %}
+                {% if info.ctaURL and info.ctaURL != empty %}
+                <p><a class="rvt-button" href={{ info.ctaURL }}>{{ info.ctaText }}</a></p>
+                {% endif %}
+                {% endif %}
+            </section>
+        </div>
+        <div class="hide-md-down rvt-grid__item-4-md-up">
+            {% include components/image.html src=info.logoURL alttext=info.logoAltText %}
+        </div>
+    </div>
+</div>

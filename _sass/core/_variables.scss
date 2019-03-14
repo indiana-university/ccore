@@ -1,0 +1,37 @@
+// Copyright (C) 2018 The Trustees of Indiana University
+// SPDX-License-Identifier: BSD-3-Clause
+
+@import "../libs/rivet-uits/core/tools";
+@import "../libs/rivet-uits/core/variables";
+
+// heading defaults
+$h-fw: $font-weight-bold;
+$h-lh: 1.25em;
+
+// heading styles
+// H1
+$h1-fs: $ts-xxl;
+$h1-fw: $h-fw;
+$h1-lh: $h-lh;
+// H2
+$h2-fs: $ts-xl;
+$h2-fw: $h-fw;
+$h2-lh: $h-lh;
+// H3
+$h3-fs: $ts-lg;
+$h3-fw: $h-fw;
+$h3-lh: $h-lh;
+// H4
+$h4-fs: $ts-md;
+$h4-fw: $h-fw;
+$h4-lh: $h-lh;
+// H5
+$h5-fs: $ts-sm;
+$h5-fw: $h-fw;
+$h5-lh: $h-lh;
+// H6
+$h6-fs: $ts-xs;
+$h6-fw: $h-fw;
+$h6-lh: $h-lh;
+
+//

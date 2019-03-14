@@ -1,0 +1,20 @@
+// Copyright (C) 2019 The Trustees of Indiana University
+// SPDX-License-Identifier: BSD-3-Clause
+
+.hero {
+  text-align: center;
+  header {
+    & > p {
+      font-size: $h2-fs;
+      font-weight: $h2-fw;
+      line-height: $h2-lh;
+      margin: 0;
+    }
+  }
+  p {
+    font-size: $ts-20;
+    &.lead {
+      margin-bottom: 2em;
+    }
+  }
+}

@@ -1,0 +1,220 @@
+// rivet-uits - @version 1.3.0
+
+// Copyright (C) 2018 The Trustees of Indiana University
+// SPDX-License-Identifier: BSD-3-Clause
+
+@include all-inputs('.rvt-validation-info') {
+  transition: box-shadow .2s ease;
+  border-color: $color-blue--600;
+  box-shadow: 0 0 0 .125rem $color-blue--600;
+
+  &:focus {
+    border-color: $color-black--700;
+    /* stylelint-disable */
+    box-shadow: 0 0 0 .125rem $color-white,
+                0 0 0 .2875rem $color-blue--600;
+    /* stylelint-enable */
+  }
+}
+
+@include all-inputs('.rvt-validation-warning') {
+  transition: box-shadow .2s ease;
+  border-color: $color-yellow--200;
+  box-shadow: 0 0 0 .125rem $color-yellow--200;
+
+  &:focus {
+    border-color: $color-black--700;
+    /* stylelint-disable */
+    box-shadow: 0 0 0 .125rem $color-white,
+                0 0 0 .2875rem $color-yellow--200;
+    /* stylelint-enable */
+  }
+}
+
+@include all-inputs('.rvt-validation-danger') {
+  transition: box-shadow .2s ease;
+  border-color: $color-orange--500;
+  box-shadow: 0 0 0 .125rem $color-orange--500;
+
+  &:focus {
+    border-color: $color-black--700;
+    /* stylelint-disable */
+    box-shadow: 0 0 0 .125rem $color-white,
+                0 0 0 .2875rem $color-orange--500;
+    /* stylelint-enable */
+  }
+}
+
+@include all-inputs('.rvt-validation-success') {
+  transition: box-shadow .2s ease;
+  border-color: $color-green--500;
+  box-shadow: 0 0 0 .125rem $color-green--500;
+
+  &:focus {
+    border-color: $color-black--700;
+    /* stylelint-disable */
+    box-shadow: 0 0 0 .125rem $color-white,
+                0 0 0 .2875rem $color-green--500;
+    /* stylelint-enable */
+  }
+}
+
+/**
+ * DEPRECATED
+ *
+ * These should be deprecated as a result of standardizing the way
+ * we refer to different alert colors across all components. There is some
+ * acceptable duplication here for simplicity's sake until we can actually
+ * remove this stuff from the code base.
+ */
+
+@include all-inputs('.rvt-is-invalid') {
+  transition: box-shadow .2s ease;
+  border-color: $color-orange--500;
+  box-shadow: 0 0 0 .125rem $color-orange--500;
+
+  &:focus {
+    border-color: $color-black--700;
+    /* stylelint-disable */
+    box-shadow: 0 0 0 .125rem $color-white,
+                0 0 0 .2875rem $color-orange--500;
+    /* stylelint-enable */
+  }
+}
+
+@include all-inputs('.rvt-is-valid') {
+  transition: box-shadow .2s ease;
+  border-color: $color-green--500;
+  box-shadow: 0 0 0 .125rem $color-green--500;
+
+  &:focus {
+    border-color: $color-black--700;
+    /* stylelint-disable */
+    box-shadow: 0 0 0 .125rem $color-white,
+                0 0 0 .2875rem $color-green--500;
+    /* stylelint-enable */
+  }
+}
+
+@include all-inputs('.rvt-has-warning') {
+  transition: box-shadow .2s ease;
+  border-color: $color-yellow--200;
+  box-shadow: 0 0 0 .125rem $color-yellow--200;
+
+  &:focus {
+    border-color: $color-black--700;
+    /* stylelint-disable */
+    box-shadow: 0 0 0 .125rem $color-white,
+                0 0 0 .2875rem $color-yellow--200;
+    /* stylelint-enable */
+  }
+}
+
+@include all-inputs('.rvt-has-info') {
+  transition: box-shadow .2s ease;
+  border-color: $color-blue--600;
+  box-shadow: 0 0 0 .125rem $color-blue--600;
+
+  &:focus {
+    border-color: $color-black--700;
+    /* stylelint-disable */
+    box-shadow: 0 0 0 .125rem $color-white,
+                0 0 0 .2875rem $color-blue--600;
+    /* stylelint-enable */
+  }
+}
+
+/**
+ * End deprecated input validation
+ */
+
+/**
+ * Inline alerts:
+ * These inline alerts are handy for displaying validation messages
+ * alongside groups of form inputs like radio buttons and checkboxes
+ */
+
+.rvt-inline-alert {
+  margin-top: $xs;
+  font-size: $ts-14;
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    width: $sm;
+    height: $sm;
+  }
+
+  &__message {
+    margin-left: $xs;
+    color: $color-black--700;
+    line-height: 1;
+  }
+
+  &--is-valid,
+  &--success {
+    color: $color-green--500;
+  }
+
+  &--has-warning,
+  &--warning {
+    color: $color-yellow--200;
+  }
+
+  &--is-invalid,
+  &--danger {
+    color: $color-orange--500;
+  }
+
+  &--has-info,
+  &--info {
+    color: $color-blue--600;
+  }
+
+  /**
+   * This standalone modifier should be used with groups of form inputs
+   * like radios and checkboxes.
+   */
+
+  &--standalone {
+    padding: $xs;
+
+    &.rvt-inline-alert--is-invalid,
+    &.rvt-inline-alert--danger {
+      border-left: $xxs solid $color-orange--500;
+      background-color: $color-orange--050;
+
+      .rvt-inline-alert__message {
+        color: $color-orange--700;
+      }
+    }
+
+    &.rvt-inline-alert--success {
+      border-left: $xxs solid $color-green--500;
+      background-color: $color-green--050;
+
+      .rvt-inline-alert__message {
+        color: $color-green--700;
+      }
+    }
+
+    &.rvt-inline-alert--warning {
+      border-left: $xxs solid $color-yellow--200;
+      background-color: $color-yellow--050;
+
+      .rvt-inline-alert__message {
+        color: $color-yellow--700;
+      }
+    }
+
+    &.rvt-inline-alert--has-info,
+    &.rvt-inline-alert--info {
+      border-left: $xxs solid $color-blue--600;
+      background-color: $color-blue--050;
+
+      .rvt-inline-alert__message {
+        color: $color-blue--700;
+      }
+    }
+  }
+}
