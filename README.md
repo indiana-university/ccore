@@ -11,7 +11,7 @@ upstream remote in the instructions below.
 
 ### Fork to your GitHub.com account
 
- 1. [Go to the original CCore communiations site](https://github.com/indiana-university/ccore).
+ 1. [Go to the original CCore communications site](https://github.com/indiana-university/ccore).
  2. To the right of the repo name will be three badges that show the watchers, stars, and forks of the repo. Click the 'fork' button.
  3. Go to your forked version of the repo and copy the clone url.
 
