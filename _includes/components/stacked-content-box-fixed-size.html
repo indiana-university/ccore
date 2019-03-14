@@ -6,7 +6,10 @@ SPDX-License-Identifier: BSD-3-Clause
 <div class="tiny-boxes__box">
     {% if include.iconName %}
     <span class="icon">
-        <img src="/assets/images/icons/{{include.iconName}}.svg" alttext="{{include.altText}}" />
+{% capture fullsrc %}
+/assets/images/icons/{{include.iconName}}.svg
+{% endcapture %}
+        {% include components/image.html src=fullsrc altText=include.altText %}
     </span>
     {% endif %}
     <section class="rvt-p-all-sm rvt-text-left">

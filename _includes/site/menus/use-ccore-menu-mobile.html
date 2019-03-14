@@ -9,10 +9,10 @@ SPDX-License-Identifier: BSD-3-Clause
 <div id="subnav-use" role="menu">
     <ul>
         <li>
-            {% if page.url == "/dashboard" %}<a aria-current="page" href="/dashboard">Dashboard</a>{% else %}<a href="/dashboard">Dashboard</a>{% endif %}
+            {% if page.url == "/dashboard" %}<a aria-current="page" href="{{ site.baseurl }}/dashboard">Dashboard</a>{% else %}<a href="{{ site.baseurl }}/dashboard">Dashboard</a>{% endif %}
         </li>
         <li>
-            {% if page.url == "/contact" %}<a aria-current="page" href="/contact">Contact</a>{% else %}<a href="/contact">Contact</a>{% endif %}
+            {% if page.url == "/contact" %}<a aria-current="page" href="{{ site.baseurl }}/contact">Contact</a>{% else %}<a href="{{ site.baseurl }}/contact">Contact</a>{% endif %}
         </li>
     </ul>
 </div>

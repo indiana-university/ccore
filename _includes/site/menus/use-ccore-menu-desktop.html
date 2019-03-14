@@ -13,7 +13,7 @@ SPDX-License-Identifier: BSD-3-Clause
         </svg>
     </button>
     <div class="rvt-dropdown__menu" id="dropdown-use" role="menu" aria-hidden="true">
-        {% if page.url == "/dashboard" %}<a aria-current="page" href="/dashboard">Dashboard</a>{% else %}<a href="/dashboard">Dashboard</a>{% endif %}
-        {% if page.url == "/contact" %}<a aria-current="page" href="/contact">Contact</a>{% else %}<a href="/contact">Contact</a>{% endif %}
+        {% if page.url == "/dashboard" %}<a aria-current="page" href="{{ site.baseurl }}/dashboard">Dashboard</a>{% else %}<a href="{{ site.baseurl }}/dashboard">Dashboard</a>{% endif %}
+        {% if page.url == "/contact" %}<a aria-current="page" href="{{ site.baseurl }}/contact">Contact</a>{% else %}<a href="{{ site.baseurl }}/contact">Contact</a>{% endif %}
     </div>
 </div>

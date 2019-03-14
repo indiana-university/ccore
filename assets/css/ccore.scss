@@ -6,12 +6,12 @@
 @import "core/variables";
 
 .ccore-home {
-  background-image: url("/assets/images/background-home.png");
+  background-image: url("{{ site.baseurl }}/assets/images/background-home.png");
   background-size: cover;
 }
 
 .ccore-docs {
-  background-image: url("/assets/images/background-docs.png");
+  background-image: url("{{ site.baseurl }}/assets/images/background-docs.png");
   background-size: cover;
 }
 
