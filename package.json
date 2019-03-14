@@ -1,0 +1,34 @@
+{
+  "name": "rivet-jekyll-theme",
+  "version": "0.1.0",
+  "description": "Jekyll theme using the Rivet Design System developed at Indiana University",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rivet": "npx yarn && gulp rivet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indiana-university/rivet-jekyll-theme.git"
+  },
+  "keywords": [
+    "rivet",
+    "jekyll",
+    "theme"
+  ],
+  "author": "Indiana University",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/indiana-university/rivet-jekyll-theme/issues"
+  },
+  "homepage": "https://github.com/indiana-university/rivet-jekyll-theme#readme",
+  "dependencies": {
+    "rivet-shell": "^0.2.1",
+    "rivet-uits": "^1.3.0"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-using": "^0.1.1"
+  }
+}

@@ -1,0 +1,20 @@
+{% comment %}
+Copyright (C) 2019 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+{% assign site_questions = site.questions %}
+{% if site_questions.size > 0 %}
+{% assign questions = site.questions | sort: "sortOrder" %}
+{% if questions.size > 0 %}
+<nav class="toc-side">
+    <h3>On this page</h3>
+    <ul>
+        <li><a href="#common-questions">Common questions</a></li>
+        {% for question in questions %}
+        <li><a href="#{{question.title | slugify | default: forloop.index }}">{{ question.title }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+{% endif %}
+{% endif %}

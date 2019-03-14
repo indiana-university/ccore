@@ -1,0 +1,12 @@
+// rivet-uits - @version 1.3.0
+
+// Copyright (C) 2018 The Trustees of Indiana University
+// SPDX-License-Identifier: BSD-3-Clause
+
+/* stylelint-disable */
+@each $key, $value in $z-index {
+  .rvt-#{$key} {
+    z-index: $value !important;
+  }
+}
+/* stylelint-enable */

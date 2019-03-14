@@ -1,0 +1,21 @@
+{% comment %}
+Copyright (C) 2019 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+{% assign documentation = site.documentation | where:"published", true %}
+{% assign docs = documentation | sort: "sortOrder" %}
+<button data-subnav-toggle="subnav-docs" aria-haspopup="true" aria-expanded="false">Documentation</button>
+<div id="subnav-docs" role="menu">
+    <ul>
+        <li>
+            {% if page.url == "/start" %}<a aria-current="page" href="/start">Quick start guide</a>{% else %}<a href="/start">Quick start guide</a>{% endif %}
+        </li>
+        {% for doc in docs %}
+        {% capture linkURL %}/{{doc.collection}}/{{doc.name}}{% endcapture %}
+        <li>
+            {% if page.url == linkURL %}<a aria-current="page" href="/{{doc.collection}}/{{doc.name}}">{{doc.name | capitalize }}</a>{% else %}<a href="/{{doc.collection}}/{{doc.name}}">{{doc.name | capitalize }}</a>{% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>

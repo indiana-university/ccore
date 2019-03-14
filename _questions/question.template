@@ -1,0 +1,26 @@
+---
+# Copyright (C) 2019 The Trustees of Indiana University
+# SPDX-License-Identifier: BSD-3-Clause
+title: "Question 4: asdf"
+iconName: "edit"
+iconAltText: ""
+definition: "Thirdly, service.."
+common: true
+ctaText: "moreInfoText"
+ctaURL: "moreInfoLink"
+imageSrc: ""
+altText: ""
+sortOrder: 4
+---
+
+
+Questions are "Collections" in the Jekyll world and can be made as either Markdown files or HTML files. Up to you.
+Either supports the front matter.
+
+Special Front Matter variables for Questions:
+
+common: boolean
+
+
+imageSrc
+altText
