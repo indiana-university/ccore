@@ -1,0 +1,83 @@
+---
+# // Copyright (C) 2019 The Trustees of Indiana University
+# // SPDX-License-Identifier: BSD-3-Clause
+---
+
+@import "core/variables";
+
+.ccore-home {
+  background-image: url("/assets/images/background-home.png");
+  background-size: cover;
+}
+
+.ccore-docs {
+  background-image: url("/assets/images/background-docs.png");
+  background-size: cover;
+}
+
+.rvt-header__main-nav {
+  margin-right: 1.5rem;
+}
+
+.supplemental-menu {
+  display: flex;
+  margin-right: 1.25rem;
+  align-items: center;
+}
+
+.rvt-button.rvt-button--reverse {
+  border-color: #fff;
+  color: #fff;
+  &:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #006298;
+  }
+}
+
+.bg-light-grey {
+  background-color: #F2F2F2;
+}
+
+.horizontal-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  a, span {
+    padding: $md;
+  }
+}
+
+.quarter-details {
+  margin: 4rem 0;
+}
+
+ul.flush-list,
+ol.flush-list {
+  padding: 0;
+  margin: $sm;
+}
+
+.rvt-button {
+  &.inverted-button {
+    border-color: #fff;
+    &:hover {
+      color: $color-link;
+      background-color: #fff;
+    }
+  }
+}
+
+@import "components/tiny-boxes";
+@import "components/content";
+@import "components/content-block";
+@import "components/hero";
+@import "components/box-grids";
+//@import "components/intro-with-toc";
+@import "components/quarterly-overview";
+@import "components/simple-table";
+@import "components/site-menu";
+@import "components/toc";

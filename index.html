@@ -1,12 +1,100 @@
-<!DOCTYPE html>
-<!--
-  Copyright (C) 2019 The Trustees of Indiana University
-  SPDX-License-Identifier: BSD-3-Clause
--->
-<html>
-<body>
+---
+# Copyright (C) 2019 The Trustees of Indiana University
+# SPDX-License-Identifier: BSD-3-Clause
+layout: home
+title: "Home"
+permalink: "/"
+---
 
-<h1>CCore</h1>
+<div class="ccore-home">
+    <div class="rvt-p-all-xs rvt-p-all-xxl-md-up rvt-p-tb-xxl">
+        {% include components/hero.html
+        subheading1="Curated content."
+        subheading2="Delivered anywhere."
+        content="ContentCore (CCore) is Indiana University's content repository and distribution center. Use it to
+        automate your site or app's content&#8212;and know for sure that you have the latest information."
+        ctaText="Learn more about CCore"
+        ctaURL="/about/overview" %}
+    </div>
+</div>
 
-</body>
-</html>
+<div id="" class="rvt-bg-crimson rvt-p-all-xxl  wrapper-tiny-boxes-center">
+    <article class="rvt-container rvt-container--center book-page tiny-boxes-wrapper">
+        <header>
+            <h2>SECTION HEADING</h2>
+            <p>Paragraph of text.</p>
+        </header>
+
+        <div class="rvt-grid tiny-boxes tiny-boxes__tight">
+            <div class="rvt-grid__item-12 rvt-grid__item-6-md-up">
+                {% include components/stacked-content-box-fixed-size.html
+                heading="index.html"
+                definition="index.html"
+                iconName="access"
+                altText=""
+                %}
+            </div>
+            <div class="rvt-grid__item-12 rvt-grid__item-6-md-up">
+                {% include components/stacked-content-box-fixed-size.html
+                heading="index.html"
+                definition="index.html"
+                iconName="done"
+                altText=""
+                %}
+            </div>
+        </div>
+        <div class="rvt-grid tiny-boxes">
+            <div class="rvt-grid__item-12 rvt-grid__item-6-md-up">
+                {% include components/stacked-content-box-fixed-size.html
+                heading="index.html"
+                definition="index.html"
+                iconName="edit"
+                altText=""
+                %}
+            </div>
+            <div class="rvt-grid__item-12 rvt-grid__item-6-md-up">
+                {% include components/stacked-content-box-fixed-size.html
+                heading="index.html"
+                definition="index.html"
+                iconName="prep"
+                altText=""
+                %}
+            </div>
+        </div>
+
+        <footer class="rvt-text-center">
+            <p><a href="#LINK" class="rvt-button rvt-button--secondary inverted-button rvt-p-lr-lg">LINK</a></p>
+        </footer>
+    </article>
+</div>
+
+<div class="rvt-p-all-xs rvt-p-all-xxl-md-up rvt-p-bottom-xxl">
+    <div class="rvt-container--center">
+        <div class="rvt-container">
+            <div class="rvt-grid">
+                <div class="rvt-grid__item-12 rvt-grid__item-6-md-up rvt-p-all-xxs rvt-p-all-xxl-md-up rvt-p-top-xxl">
+                    <!-- IMAGE? -->
+                    {% include components/content-block.html
+                    subheading1="Curated content."
+                    subheading2="Delivered anywhere."
+                    content="ContentCore (CCore) is Indiana University's content repository and distribution center. Use
+                    it to automate your site or app's content&#8212;and know for sure that you have the latest
+                    information."
+                    ctaText="Learn more about CCore"
+                    ctaURL="/about/overview" %}
+                </div>
+                <div class="rvt-grid__item-12 rvt-grid__item-6-md-up rvt-p-all-xxs rvt-p-all-xxl-md-up rvt-p-top-xxl">
+                    <!-- IMAGE? -->
+                    {% include components/content-block.html
+                    subheading1="Curated content."
+                    subheading2="Delivered anywhere."
+                    content="ContentCore (CCore) is Indiana University's content repository and distribution center. Use
+                    it to automate your site or app's content&#8212;and know for sure that you have the latest
+                    information."
+                    ctaText="Learn more about CCore"
+                    ctaURL="/about/overview" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

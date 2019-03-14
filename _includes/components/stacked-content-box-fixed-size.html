@@ -1,0 +1,19 @@
+{% comment %}
+Copyright (C) 2019 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+<div class="tiny-boxes__box">
+    {% if include.iconName %}
+    <span class="icon">
+        <img src="/assets/images/icons/{{include.iconName}}.svg" alttext="{{include.altText}}" />
+    </span>
+    {% endif %}
+    <section class="rvt-p-all-sm rvt-text-left">
+        <header>
+            <h3>{{ include.heading }}</h3>
+        </header>
+        <div class="truncated">{{ include.definition }}</div>
+        {% if include.more %}<a href="#{{include.heading | slugify }}" class="rvt-button rvt-button--small">...More</a>{% endif %}
+    </section>
+</div>

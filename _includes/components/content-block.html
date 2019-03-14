@@ -1,0 +1,22 @@
+{% comment %}
+Copyright (C) 2019 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+<div class="content-block">
+    <section>
+        {% if include.subheading1 != empty or include.subheading2 != empty %}
+        <header>
+            <p>{{ include.subheading1 }}</p>
+            <p>{{ include.subheading2 }}</p>
+        </header>
+        {% endif %}
+        {% if include.lead and include.lead != empty %}
+        <div class="lead">{{ include.lead | markdownify}}</div>
+        {% endif %}
+        {% if include.content and include.content != empty %}
+        <div class="content">{{ include.content | markdownify }}</div>
+        {% endif %}
+        <p><a class="rvt-button" href={{ include.ctaURL }}>{{ include.ctaText }}</a></p>
+    </section>
+</div>

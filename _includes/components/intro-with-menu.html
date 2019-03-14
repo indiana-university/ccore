@@ -1,0 +1,37 @@
+{% comment %}
+Copyright (C) 2019 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+<div class="intro-with-toc rvt-container">
+    <div class="rvt-grid">
+        <div class="rvt-grid__item-12 rvt-grid__item-8-md-up">
+            <section>
+                {% if include.heading != empty or include.subHeading1 != empty or include.subHeading1 != empty  %}
+                <header>
+                    {% if include.heading and include.heading != blank %}
+                    <h1>{{ include.heading }}</h1>
+                    {% if include.subHeading1 and include.subHeading1 != empty %}<p class="subheading">{{ include.subHeading1 }}</p>{% endif %}
+                    {% if include.subHeading2 and include.subHeading2 != empty %}<p class="subheading">{{ include.subHeading2 }}</p>{% endif %}
+                    {% else %}
+                    {% if include.subHeading1 and include.subHeading1 != empty %}<h2>{{ include.subHeading1 }}</h2>{% endif %}
+                    {% if include.subHeading2 and include.subHeading2 != empty %}<h2>{{ include.subHeading2 }}</h2>{% endif %}
+                    {% endif %}
+                </header>
+                {% endif %}
+                {% if include.lead != empty %}
+                <div class="lead">{{ include.lead | markdownify}}</div>
+                {% endif %}
+                {% if include.content != empty %}
+                <div class="content">{{ include.content | markdownify }}</div>
+                {% endif %}
+                {% if include.ctaURL != empty and include.ctaText != empty  %}
+                <p><a class="rvt-button" href={{ include.ctaURL }}>{{ include.ctaText }}</a></p>
+                {% endif %}
+            </section>
+        </div>
+        <div class="rvt-grid__item-12 rvt-grid__item-4-md-up">
+            {% include {{include.toc}} %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+// Copyright (C) 2019 The Trustees of Indiana University
+// SPDX-License-Identifier: BSD-3-Clause
+
+.toc-side {
+  text-align: initial;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    font-size: $h4-fs;
+  }
+
+  ul, ol {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+
+    li {
+
+    }
+  }
+}
+
+@include mq($breakpoint-md) {
+  .toc-side {
+    padding-left: $xl;
+    padding-bottom: $sm;
+    border-left: 1px solid #ccc;
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 2em;
+    }
+  }
+}

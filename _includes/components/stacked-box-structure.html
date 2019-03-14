@@ -1,0 +1,25 @@
+{% comment %}
+Copyright (C) 2019 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+<div class="rvt-container rvt-container--freshman rvt-container--center">
+    <div class="rvt-grid">
+        <div class="rvt-grid__item">
+            <section class="tiny-boxes-wrapper">
+                <header>
+                    <h2>{{ include.heading }}</h2>
+                    <p>{{ include.description }}</p>
+                </header>
+
+                {% include {{include.data-template}} %}
+
+                <footer>
+                    {% if include.ctaURL and include.ctaText %}
+                    <a href={{include.ctaURL}} class="rvt-button rvt-button--danger-secondary">{{include.ctaText}}</a>
+                    {% endif %}
+                </footer>
+            </section>
+        </div>
+    </div>
+</div>
