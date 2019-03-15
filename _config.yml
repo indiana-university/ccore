@@ -1,0 +1,59 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: CCore
+email:
+description: >- # this means to ignore newlines until "baseurl:"
+  ContentCore (CCore) is Indiana University's content repository and distribution center.
+  Use it to automate your site or app's content--and know for sure that you have the latest information.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://ccore.iu.edu" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username:
+# github_username:
+
+# Build settings
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+remote_theme: indiana-university/rivet-jekyll-theme
+plugins:
+  - jekyll-feed
+#  - jekyll-sitemap ?
+
+permalink: /blog/:year/:month/:day/:title
+collections:
+  documentation:
+    output: true
+    permalink: /documentation/:name
+  questions:
+
+sass:
+  sass_dir: _sass
+  style: compressed # what are the other options?
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - _questions/question.template
+  - _posts/post.template
+  - _quarters/quarter.template
+  - _documentation/documentation.template
+  - _components/components.template

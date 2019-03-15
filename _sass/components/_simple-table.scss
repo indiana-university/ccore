@@ -1,0 +1,58 @@
+// Copyright (C) 2019 The Trustees of Indiana University
+// SPDX-License-Identifier: BSD-3-Clause
+
+$st-cell-p: $xs + $xxs;
+.simple-table {
+  max-width: 100%;
+  overflow-x: scroll;
+
+  table {
+    th[data-cell-type="number"],
+    td[data-cell-type="number"] {
+      text-align: right;
+    }
+
+    thead {
+      tr {
+        border-bottom: 1px solid #333;
+      }
+
+      th {
+        font-size: $ts-20;
+      }
+
+      th:first-child {
+        padding-left: 0;
+      }
+
+      th:last-child {
+        padding-right: 0;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #333;
+
+        th, td {
+          font-weight: lighter;
+          font-family: "BentonSans", "Helvetica Neue", "Helvetica", "sans-serif";
+          vertical-align: top;
+        }
+
+        td {
+          padding: $st-cell-p;
+        }
+
+        th:first-child,
+        td:first-child {
+          padding-left: 0;
+        }
+
+        td:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

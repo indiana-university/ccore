@@ -1,0 +1,20 @@
+{% comment %}
+Copyright (C) 2019 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+{% assign common_questions = site.questions | where_exp:"question", "question.common == true" %}
+{% assign questions = common_questions | sort: "sortOrder" %}
+
+{% for item in questions %}
+{% assign remainder = forloop.index | modulo:2 %}
+
+{% include components/stacked-boxes.html
+remainder=remainder
+definition=item.definition
+iconName=item.iconName
+iconAltText=item.iconAltText
+heading=item.title
+%}
+
+{% endfor %}

@@ -1,0 +1,12 @@
+
+.idea/
+
+### Jekyll template
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+*.gem
+.bundle
+Gemfile.lock
+/node_modules

@@ -1,0 +1,51 @@
+// rivet-uits - @version 1.3.0
+
+// Copyright (C) 2018 The Trustees of Indiana University
+// SPDX-License-Identifier: BSD-3-Clause
+
+.text-uppercase,
+.rvt-text-uppercase {
+  text-transform: uppercase;
+  /**
+   * All uppercase text is harder for humans to read. A little extra
+   * letter spacing helps make it easier.
+   */
+  letter-spacing: .04rem;
+}
+
+.text-bold,
+.rvt-text-bold {
+  font-weight: 700 !important;
+}
+
+.text-regular,
+.rvt-text-regular {
+  font-weight: 400 !important;
+}
+
+.text-left,
+.rvt-text-left {
+  text-align: left !important;
+}
+
+.text-right,
+.rvt-text-right {
+  text-align: right !important;
+}
+
+.text-center,
+.rvt-text-center {
+  text-align: center !important;
+}
+
+/**
+ * Sets shorter line-height for headings and title.
+ */
+
+.rvt-lh-title {
+  line-height: 1.1;
+}
+
+.rvt-text-nobr {
+  white-space: nowrap;
+}
