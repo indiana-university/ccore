@@ -10,3 +10,5 @@ _site/
 .bundle
 Gemfile.lock
 /node_modules
+
+.DS_Store
