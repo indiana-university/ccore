@@ -14,7 +14,7 @@ SPDX-License-Identifier: BSD-3-Clause
         {% for doc in docs %}
         {% capture linkURL %}/{{doc.collection}}/{{doc.name}}{% endcapture %}
         <li>
-            {% if page.url == linkURL %}<a aria-current="page" href="/{{doc.collection}}/{{doc.name}}">{{doc.name | capitalize }}</a>{% else %}<a href="/{{doc.collection}}/{{doc.name}}">{{doc.name | capitalize }}</a>{% endif %}
+            {% if page.url == linkURL %}<a aria-current="page" href="/{{doc.collection}}/{{doc.name}}">CCore {{doc.name | capitalize }}</a>{% else %}<a href="/{{doc.collection}}/{{doc.name}}">CCore {{doc.name | capitalize }}</a>{% endif %}
         </li>
         {% endfor %}
     </ul>
