@@ -1,0 +1,35 @@
+{% comment %}
+Copyright (C) 2019 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+{% assign site_documentation = site.documentation %}
+{% if site_documentation.size > 0 %}
+{% assign projects = site.documentation | sort: "sortOrder" %}
+{% if projects.size > 0 %}
+{% for project in projects %}
+{% assign remainder = forloop.index | modulo:2 %}
+<div class="rvt-container rvt-p-tb-xl">
+    <div class="rvt-grid">
+        <div class="rvt-grid__item-12">
+            <article id="{{project.name | slugify | default: forloop.index }}">
+                <header>
+                    <h3>{{ project.fullName }} or {{project.name | capitalize }}</h3>
+                </header>
+                {{ project.shortContent | markdownify }}
+                <div>
+                    <p>
+                        <a href="{{project.startURL}}" class="rvt-button rvt-m-right-xs">{{project.startText}}</a>
+                        <a href="{{project.docsURL}}" class="rvt-button rvt-button--secondary">{{project.docsText}}</a></p>
+                    <p>
+                        <a href="{{project.moreURL}}">{{project.moreText}}</a>
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+{% endif %}
+

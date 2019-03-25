@@ -1,0 +1,55 @@
+{% comment %}
+Copyright (C) 2019 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+{% assign site_questions = site.questions %}
+{% if site_questions.size > 0 %}
+{% assign questions = site.questions | sort: "sortOrder" %}
+{% if questions.size > 0 %}
+{% for question in questions %}
+{% assign remainder = forloop.index | modulo:2 %}
+<div class="rvt-container rvt-p-tb-xl">
+    <div class="rvt-grid">
+        {% if question.imageSrc != empty %}
+        {% if remainder == 0 %}
+        <div class="rvt-grid__item-12 rvt-grid__item-8-md-up rvt-p-right-xxl">
+            <article id="{{question.title | slugify | default: question.id }}">
+                <header>
+                    <h2>{{ question.title }}</h2>
+                </header>
+                {{ question.content | markdownify }}
+            </article>
+        </div>
+        <div class="rvt-grid__item-12 rvt-grid__item-4-md-up">
+            {% include components/image.html src=question.imageSrc altText=question.altText %}
+        </div>
+        {% else %}
+        <div class="rvt-grid__item-12 rvt-grid__item-4-md-up">
+            {% include components/image.html src=question.imageSrc altText=question.altText %}
+        </div>
+        <div class="rvt-grid__item-12 rvt-grid__item-8-md-up rvt-p-left-xxl">
+            <article id="{{question.title | slugify | default: question.id }}">
+                <header>
+                    <h2>{{ question.title }}</h2>
+                </header>
+                {{ question.content | markdownify }}
+            </article>
+        </div>
+        {% endif %}
+        {% else %}
+        <div class="rvt-grid__item-12">
+            <article id="{{question.title | slugify | default: question.id }}">
+                <header>
+                    <h2>{{ question.title }}</h2>
+                </header>
+                {{ question.content | markdownify }}
+            </article>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+{% endif %}
+

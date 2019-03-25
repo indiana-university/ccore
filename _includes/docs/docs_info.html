@@ -9,7 +9,7 @@ SPDX-License-Identifier: BSD-3-Clause
 {% assign name = include.name | default: infoName | default: pageName %}
 <div class="rvt-p-lr-xxl-md-up rvt-p-tb-md-md-up rvt-p-lr-sm rvt-p-tb-sm intro-with-toc rvt-container">
     <div class="rvt-grid rvt-p-lr-xxl-md-up rvt-p-lr-md">
-        <div class="rvt-grid__item-12 rvt-grid__item-8-md-up rvt-p-lr-xxl">
+        <div class="rvt-grid__item-12 rvt-grid__item-8-md-up rvt-p-lr-xxl-md-up rvt-p-lr-md">
             <section id="module-{{page.name | downcase}}">
                 {% if name != empty or info.subheading1 != empty or info.subheading2 != empty  %}
                 <header>

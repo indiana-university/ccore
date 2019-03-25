@@ -14,130 +14,69 @@ SPDX-License-Identifier: BSD-3-Clause
                 </g>
             </svg>
         </span>
-        <a href="#api-overview">API Overview</a>
-        <a href="#who-should-use">Who should use {{include.name}}?</a>
-        <a href="#how-to-use">How do you use {{include.name}}?</a>
+        <a href="#where-origin">Where does the content originate?</a>
+        <a href="#who">Who manages the content?</a>
+        <a href="#what">What types of content does it include?</a>
+        <a href="#where-used">Where is the content used?</a>
     </nav>
 </div>
 
-<article id="api-overview" class="rvt-p-all-xxl rvt-bg-blue text-center component">
-    <header>
-        <h2>API Overview</h2>
-    </header>
-    <div class="rvt-container--center book-page">
-        <div class="rvt-grid tiny-boxes tiny-boxes__tight tiny-boxes__box--expand">
-            <div class="rvt-grid__item rvt-grid__item-12 rvt-grid__item-6-md-up">
-                {% include components/stacked-content-box-fixed-size.html
-                heading="services-body.html heading 1"
-                definition="services-body.html definition 1"
-                iconName="access"
-                altText=""
-                %}
-            </div>
-            <div class="rvt-grid__item rvt-grid__item-12 rvt-grid__item-6-md-up">
-                {% include components/stacked-content-box-fixed-size.html
-                heading="services-body.html heading 2"
-                definition="services-body.html definition 2services-body.html definition 2services-body.html definition 2services-body.html definition 2services-body.html definition 2services-body.html definition 2"
-                iconName="done"
-                altText=""
-                %}
-            </div>
-        </div>
-        <div class="rvt-grid tiny-boxes">
-            <div class="rvt-grid__item rvt-grid__item-12 rvt-grid__item-6-md-up">
-                {% include components/stacked-content-box-fixed-size.html
-                heading="services-body.html heading 3"
-                definition="services-body.html definition 3"
-                iconName="edit"
-                altText=""
-                %}
-            </div>
-            <div class="rvt-grid__item rvt-grid__item-12 rvt-grid__item-6-md-up">
-                {% include components/stacked-content-box-fixed-size.html
-                heading="services-body.html heading 4"
-                definition="services-body.html definition 4"
-                iconName="prep"
-                altText=""
-                %}
+<article id="{{include.name | downcase }}-questions" class="rvt-p-all-md rvt-p-all-xxl-md-up rvt-bg-blue component ">
+
+    <div class="rvt-container rvt-container--sophomore rvt-container--center rvt-text-left rvt-p-tb-xl-md-up rvt-p-tb-xs">
+        <div class="rvt-grid">
+            <div class="rvt-grid__item-12">
+                <article id="where-origin">
+                    <header>
+                        <h2>Where does {{include.name}} content originate from?</h2>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </article>
             </div>
         </div>
     </div>
+
+    <div class="rvt-container rvt-container--sophomore rvt-container--center rvt-text-left rvt-p-tb-xl-md-up rvt-p-tb-xs">
+        <div class="rvt-grid">
+            <div class="rvt-grid__item-12">
+                <article id="who">
+                    <header>
+                        <h2>Who manages the content?</h2>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <div class="rvt-container rvt-container--sophomore rvt-container--center rvt-text-left rvt-p-tb-xl-md-up rvt-p-tb-xs">
+        <div class="rvt-grid">
+            <div class="rvt-grid__item-12">
+                <article id="what">
+                    <header>
+                        <h2>What types of content does it include?</h2>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <div class="rvt-container rvt-container--sophomore rvt-container--center rvt-text-left rvt-p-tb-xl-md-up rvt-p-tb-xs">
+        <div class="rvt-grid">
+            <div class="rvt-grid__item-12">
+                <article id="where-used">
+                    <header>
+                        <h2>Where is the content used?</h2>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </article>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p><a href="#url-to-api" class="rvt-button inverted-button rvt-p-lr-lg">Read API documentation</a></p>
+
     </footer>
-</article>
-
-<article id="who-should-use" class="rvt-p-all-xxl rvt-m-bottom-xxl component">
-    <header class="rvt-container--center book-page">
-        <h2>Who should use {{include.name}}?</h2>
-        <p>Paragraph</p>
-    </header>
-    <div class="simple-table rvt-container--center book-page">
-        <table class="rvt-table-plain rvt-table-compact" title="Who should use {{include.component}}">
-            <thead>
-            <tr>
-                <th>Role</th>
-                <th>Description</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th>Admins</th>
-                <td>
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                    </ul>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</article>
-
-<article id="how-to-use" class="rvt-m-top-xxl rvt-p-all-xxl bg-light-grey text-center component">
-    <header>
-        <h2>How do you use {{include.name}}?</h2>
-    </header>
-    <div class="rvt-container--center rvt-container--sophomore">
-        <div class="rvt-grid tiny-boxes tiny-boxes--loose tiny-boxes__box--expand">
-            <div class="rvt-grid__item rvt-grid__item-12 rvt-grid__item-6-md-up text-left">
-                {% capture box1 %}
-                <ol class="flush-list">
-                    <li>List item 1</li>
-                    <li>List item 2</li>
-                    <li>List item 3</li>
-                    <li>List item 2</li>
-                    <li>List item 3</li>
-                    <li>List item 2</li>
-                    <li>List item 3</li>
-                </ol>
-                {% endcapture %}
-
-                {% include components/stacked-content-box-variable-size.html
-                heading="Adding "
-                definition=box1
-                iconName="edit"
-                altText="edit icon"
-                %}
-            </div>
-            <div class="rvt-grid__item rvt-grid__item-12 rvt-grid__item-6-md-up text-left">
-                {% capture box2 %}
-                <ol class="flush-list">
-                    <li>List item 1</li>
-                    <li>List item 2</li>
-                    <li>List item 3</li>
-                </ol>
-                {% endcapture %}
-                {% include components/stacked-content-box-variable-size.html
-                heading="Requesting"
-                definition=box2
-                iconName="edit"
-                altText="edit icon"
-                %}
-            </div>
-        </div>
-    </div>
 </article>
 

@@ -41,18 +41,40 @@
 
 .horizontal-links {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: start;
+  text-align: left;
   a, span {
     padding: $md;
   }
 }
 
+@include mq($breakpoint-md) {
+  .horizontal-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    a, span {
+      padding: $md;
+    }
+  }
+}
+
+
 .quarter-details {
-  margin: 4rem 0;
+  margin: 0;
+  header {
+    margin-top: 0;
+  }
+}
+
+.quarterly-report-article-wrapper {
+    border-bottom: 1px solid #cccccc;
 }
 
 ul.flush-list,
@@ -76,8 +98,9 @@ ol.flush-list {
 @import "components/content-block";
 @import "components/hero";
 @import "components/box-grids";
-//@import "components/intro-with-toc";
+@import "components/bodies";
 @import "components/quarterly-overview";
 @import "components/simple-table";
+@import "components/single-sourcing";
 @import "components/site-menu";
 @import "components/toc";
