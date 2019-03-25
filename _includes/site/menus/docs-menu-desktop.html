@@ -15,12 +15,13 @@ SPDX-License-Identifier: BSD-3-Clause
         </svg>
     </button>
     <div class="rvt-dropdown__menu" id="dropdown-docs" role="menu" aria-hidden="true">
+<!--
         {% if page.url == "/start" %}
         <a aria-current="page" href="/start">Quick start guide</a>
         {% else %}
         <a href="/start">Quick start guide</a>
         {% endif %}
-
+-->
         {% for doc in docs %}
         {% capture linkURL %}/{{doc.collection}}/{{doc.name}}{% endcapture %}
         {% if page.url == linkURL %}
