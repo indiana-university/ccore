@@ -9,7 +9,7 @@ SPDX-License-Identifier: BSD-3-Clause
 {% if questions.size > 0 %}
 {% for question in questions %}
 {% assign remainder = forloop.index | modulo:2 %}
-<div class="rvt-container rvt-p-tb-xl">
+<div class="rvt-container rvt-p-tb-xl site-content-block">
     <div class="rvt-grid">
         <div class="rvt-grid__item-12">
             <article id="{{question.title | slugify | default: question.id }}">
