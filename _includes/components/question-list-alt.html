@@ -9,7 +9,7 @@ SPDX-License-Identifier: BSD-3-Clause
 {% if questions.size > 0 %}
 {% for question in questions %}
 {% assign remainder = forloop.index | modulo:2 %}
-<div class="rvt-container rvt-p-tb-xl">
+<div class="rvt-container rvt-p-tb-xl site-content-block">
     <div class="rvt-grid">
         {% if question.imageSrc != empty %}
         {% if remainder == 0 %}

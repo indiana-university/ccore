@@ -9,19 +9,25 @@ SPDX-License-Identifier: BSD-3-Clause
 {% if projects.size > 0 %}
 {% for project in projects %}
 {% assign remainder = forloop.index | modulo:2 %}
-<div class="rvt-container rvt-p-tb-xl">
-    <div class="rvt-grid">
-        <div class="rvt-grid__item-12">
-            <article id="{{project.name | slugify | default: forloop.index }}">
-                <header>
+{% capture imagepath %}assets/images/hero-{{project.name}}.svg{% endcapture %}
+<div class="rvt-container rvt-m-tb-xl rvt-p-lr-sm">
+    <div class="rvt-grid project-card">
+        <div class="rvt-grid__item-12 rvt-grid__item-1-md-up">
+            <span class="badged-icon">
+            {% include components/image.html src=imagepath %}
+            </span>
+        </div>
+        <div class="rvt-grid__item-12 rvt-grid__item-11-md-up">
+            <article class="rvt-p-left-md-md-up" id="{{project.name | slugify | default: forloop.index }}">
+                <header class="rvt-m-top-lg rvt-m-top-none-md-up">
                     <h3>{{ project.fullName }} or {{project.name | capitalize }}</h3>
                 </header>
                 {{ project.shortContent | markdownify }}
                 <div>
-                    <p>
-                        <a href="{{project.startURL}}" class="rvt-button rvt-m-right-xs">{{project.startText}}</a>
-                        <a href="{{project.docsURL}}" class="rvt-button rvt-button--secondary">{{project.docsText}}</a></p>
-                    <p>
+                    <p class="rvt-m-all-remove">
+                        <a href="{{project.startURL}}" class="rvt-button rvt-m-right-xs rvt-m-bottom-md rvt-m-top-none">{{project.startText}}</a>
+                        <a href="{{project.docsURL}}" class="rvt-button rvt-button--secondary rvt-m-bottom-md rvt-m-top-none">{{project.docsText}}</a></p>
+                    <p class="rvt-m-all-remove">
                         <a href="{{project.moreURL}}">{{project.moreText}}</a>
                     </p>
                 </div>

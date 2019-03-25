@@ -18,3 +18,24 @@
     }
   }
 }
+
+.intro-with-auto-toc,
+.intro-with-toc {
+  padding: $lg $xl;
+}
+
+@include mq($breakpoint-md) {
+  .intro-with-auto-toc,
+  .intro-with-toc {
+    padding: $lg $xxl;
+  }
+}
+
+.site-content-block.rvt-container {
+  padding: $sm $xl;
+}
+@include mq($breakpoint-md) {
+  .site-content-block.rvt-container {
+    padding: $md $xxl;
+  }
+}
