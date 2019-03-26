@@ -2,9 +2,6 @@
 .single-sourcing {
   header {
     h1, h2, h3, h4, h5, h6 {
-      font-size: $ts-36;
-      font-weight: $h3-fw;
-      line-height: $h3-lh;
       text-align: center;
       margin: 0;
     }
@@ -17,12 +14,6 @@
 
 @include mq($breakpoint-md) {
   .single-sourcing {
-    header {
-      h1, h2, h3, h4, h5, h6 {
-        font-size: $ts-32;
-      }
-    }
-
     .ss-icon-md-up {
       max-height: 140px;
     }

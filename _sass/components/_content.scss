@@ -12,7 +12,7 @@
 }
 
 body {
-  font-size: $ts-20;
+  font-size: $ts-16;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,7 +47,7 @@ h6, .h6 {
 
 @include mq($breakpoint-md) {
   body {
-    font-size: $ts-20;
+    font-size: $ts-16;
   }
 
   h1, .h1 {
@@ -76,9 +76,6 @@ h6, .h6 {
   }
 }
 
-
-
-
 .base-body {
   header {
     margin-top: 0;
@@ -96,32 +93,6 @@ h6, .h6 {
   h1, h2, h3, h4, h5, h6 {
     margin-top: .5em;
     margin-bottom: .5em;
-  }
-
-  h1, .h1 {
-    font-size: $ts-32;
-  }
-
-  h2, .h2 {
-    font-size: $ts-29;
-  }
-
-  h3, .h3 {
-    font-size: $ts-26;
-  }
-
-  h4, .h4 {
-    font-size: $ts-23;
-  }
-
-  h5, .h5 {
-    font-size: $ts-20;
-  }
-
-  h6, .h6 {
-    font-size: $ts-20;
-    font-style: italic;
-    font-weight: normal;
   }
 
   header {
