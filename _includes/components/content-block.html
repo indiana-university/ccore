@@ -7,8 +7,8 @@ SPDX-License-Identifier: BSD-3-Clause
     <section>
         {% if include.subheading1 != empty or include.subheading2 != empty %}
         <header>
-            <p>{{ include.subheading1 }}</p>
-            <p>{{ include.subheading2 }}</p>
+            {% if include.subheading1 and include.subheading1 != empty %}<p>{{ include.subheading1 }}</p>{% endif %}
+            {% if include.subheading2 and include.subheading2 != empty %}<p>{{ include.subheading2 }}</p>{% endif %}
         </header>
         {% endif %}
         {% if include.lead and include.lead != empty %}

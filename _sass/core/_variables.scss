@@ -10,28 +10,51 @@ $h-lh: 1.25em;
 
 // heading styles
 // H1
-$h1-fs: $ts-xxl;
+$h1-fs: $ts-41;
 $h1-fw: $h-fw;
 $h1-lh: $h-lh;
 // H2
-$h2-fs: $ts-xl;
+$h2-fs: $ts-36;
 $h2-fw: $h-fw;
 $h2-lh: $h-lh;
 // H3
-$h3-fs: $ts-lg;
+$h3-fs: $ts-32;
 $h3-fw: $h-fw;
 $h3-lh: $h-lh;
 // H4
-$h4-fs: $ts-md;
+$h4-fs: $ts-29;
 $h4-fw: $h-fw;
 $h4-lh: $h-lh;
 // H5
-$h5-fs: $ts-sm;
+$h5-fs: $ts-26;
 $h5-fw: $h-fw;
 $h5-lh: $h-lh;
 // H6
-$h6-fs: $ts-xs;
+$h6-fs: $ts-23;
 $h6-fw: $h-fw;
 $h6-lh: $h-lh;
 
-//
+// heading styles
+// H1
+$h1-fs-m: $ts-36;
+// H2
+$h2-fs-m: $ts-32;
+// H3
+$h3-fs-m: $ts-29;
+// H4
+$h4-fs-m: $ts-26;
+// H5
+$h5-fs-m: $ts-23;
+// H6
+$h6-fs-m: $ts-20;
+
+
+
+//$ts-12: map-get($type-sizes, 12) !default;
+//$ts-14: map-get($type-sizes, 14) !default;
+//$ts-16: map-get($type-sizes, 16) !default;
+//$ts-18: map-get($type-sizes, 18) !default;
+//$ts-20: map-get($type-sizes, 20) !default;
+//$ts-23: map-get($type-sizes, 23) !default;
+//$ts-26: map-get($type-sizes, 26) !default;
+
