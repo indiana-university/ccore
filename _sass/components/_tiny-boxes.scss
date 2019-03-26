@@ -1,6 +1,19 @@
 // Copyright (C) 2019 The Trustees of Indiana University
 // SPDX-License-Identifier: BSD-3-Clause
 
+.tiny-boxes-wrapper {
+  header {
+    .lead {
+      font-size: $ts-20;
+      letter-spacing: 0.04em;
+      font-weight: lighter;
+      color: #ffffff;
+      padding: 0;
+      margin: 1em 0;
+    }
+  }
+}
+
 .tiny-boxes {
 
   &.tiny-boxes--loose {
