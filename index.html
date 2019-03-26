@@ -7,7 +7,7 @@ permalink: "/"
 ---
 
 <div class="ccore-home">
-    <div class="rvt-p-all-xs rvt-p-all-xxl-md-up rvt-p-tb-xxl">
+    <div class="hero-wrapper">
         {% include components/hero.html
         subheading1="Curated content."
         subheading2="Delivered anywhere."
@@ -22,7 +22,7 @@ permalink: "/"
     <article class="rvt-container rvt-container--center book-page tiny-boxes-wrapper">
         <header class="rvt-text-center">
             <h2>How it works</h2>
-            <p>What makes CCore valuable? It's the official source for official information.</p>
+            <p class="lead">What makes CCore valuable? It's the official source for official information.</p>
         </header>
 
         <div class="rvt-grid tiny-boxes tiny-boxes__tight tiny-boxes__box--expand">
@@ -71,23 +71,23 @@ permalink: "/"
     </article>
 </div>
 
-<div class="rvt-p-all-xs rvt-p-all-xxl-md-up rvt-p-bottom-xxl">
+<div class="heroes">
     <div class="rvt-container--center">
         <div class="rvt-container">
             <div class="rvt-grid">
-                <div class="rvt-grid__item-12 rvt-grid__item-6-md-up rvt-p-all-xxs rvt-p-all-xxl-md-up rvt-p-top-xxl">
+                <div class="hero rvt-grid__item-12 rvt-grid__item-6-lg-up">
                     <!-- IMAGE? -->
                     {% include components/content-block.html
                     subheading1="Where we are"
-                    content="Learn about the current line-up of CCore applications, and what they can deliver for your project."
+                    lead="Learn about the current line-up of CCore applications, and what they can deliver for your project."
                     ctaText="See our applications"
                     ctaURL="/applications" %}
                 </div>
-                <div class="rvt-grid__item-12 rvt-grid__item-6-md-up rvt-p-all-xxs rvt-p-all-xxl-md-up rvt-p-top-xxl">
+                <div class="hero rvt-grid__item-12 rvt-grid__item-6-lg-up">
                     <!-- IMAGE? -->
                     {% include components/content-block.html
                     subheading1="Where we're going"
-                    content="See how we will take CCore into the future, our plans for new applications and new content customers."
+                    lead="See how we will take CCore into the future, our plans for new applications and new content customers."
                     ctaText="See our roadmap"
                     ctaURL="/roadmap" %}
                 </div>
@@ -96,14 +96,15 @@ permalink: "/"
     </div>
 </div>
 
-<div id="" class="bg-light-grey rvt-p-all-xxl ">
+<div class="hero bg-light-grey rvt-p-all-xxl">
 
     <article class="rvt-container rvt-container--center book-page tiny-boxes-wrapper rvt-text-center">
         <header>
             <h2>Got an idea?</h2>
-            <p>Is there content that you'd like to see in CCore, or a specific feature? Let us know! We'd love to hear from you.</p>
         </header>
-
+        <div class="lead">
+            <p>Is there content that you'd like to see in CCore, or a specific feature? Let us know! We'd love to hear from you.</p>
+        </div>
         <footer class="rvt-text-center">
             <p><a href="/contact" class="rvt-button rvt-button--secondary rvt-p-lr-lg">Contact the CCore team</a></p>
         </footer> 

@@ -47,15 +47,14 @@
   align-items: start;
   text-align: left;
   &.site-content-block {
-    padding: $sm;
-    padding-left: $lg;
-    padding-right: $lg;
+    padding: $sm $lg;
   }
-  a, span {
+  span {
     padding: $xs;
-  }
-  a {
     flex-grow: 2;
+    &:first-of-type {
+      flex-grow: 0;
+    }
   }
 }
 
@@ -68,11 +67,9 @@
     align-items: center;
     text-align: left;
     &.site-content-block {
-      padding: $sm;
-      padding-left: $xxl;
-      padding-right: $xxl;
+      padding: 0 $xxl;
     }
-    a, span {
+    span {
       padding: $md;
     }
   }
@@ -80,14 +77,27 @@
 
 
 .quarter-details {
-  margin: 0;
+  max-width: 50em;
+  margin: 0 auto;
   header {
     margin-top: 0;
   }
 }
+@include mq($breakpoint-md) {
+  .quarter-details {
+    max-width: 80em;
+    margin: 0 auto;
+  }
+}
 
 .quarterly-report-article-wrapper {
-    border-bottom: 1px solid #cccccc;
+    padding: $lg;
+}
+
+@include mq($breakpoint-md) {
+  .quarterly-report-article-wrapper {
+    padding: $xxl;
+  }
 }
 
 ul.flush-list,
