@@ -6,15 +6,25 @@ title: "Dashboard"
 permalink: "/dashboard"
 ---
 
-<div class="rvt-p-tb-md rvt-p-all-xxl-md-up">
-    {% include components/intro-with-menu.html
-    toc="toc/dashboard-toc.html"
-    heading="Dashboard"
-    subheading1=""
-    subheading2=""
-    lead=""
-    content=""
-    ctaText=""
-    ctaURL="" %}
+{% include components/intro-with-menu.html
+toc="toc/dashboard-toc.html"
+heading="Dashboard"
+subHeading1="Your portal into all CCore applications and documentation"
+subHeading2=""
+lead=""
+content=""
+ctaText="Learn more about CCore"
+ctaURL="/about" %}
+
+
+<div class="bg-light-grey site-content-block-wrapper">
+    <article class="rvt-container site-content-block">
+        <header class="rvt-text-center">
+            <h2>Start using CCore</h2>
+            <p>Below are all CCore applications in production. Authorized users can log into applications to create, edit, and manage content; developers can read API documentation to deliver CCore content into their own applications and websites.
+            </p>
+        </header>
+        {% include components/dashboard-project-list.html %}
+    </article>
 </div>
 

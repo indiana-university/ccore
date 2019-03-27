@@ -3,18 +3,107 @@
 
 .hero {
   text-align: center;
+
   header {
     & > p {
-      font-size: $h2-fs;
+      font-size: $ts-32;
       font-weight: $h2-fw;
       line-height: $h2-lh;
       margin: 0;
     }
   }
+
   p {
     font-size: $ts-20;
+
     &.lead {
-      margin-bottom: 2em;
+      margin-bottom: 0;
+      letter-spacing: 0.03em;
     }
+  }
+
+  .rvt-button {
+    font-weight: normal;
+  }
+}
+
+@include mq($breakpoint-md) {
+  .hero {
+    header {
+      & > p {
+        font-size: $ts-36;
+      }
+    }
+  }
+}
+
+.heroes {
+  padding: $xl;
+  .hero {
+    padding: $xs;
+    margin: 1em 0;
+    header {
+      & > p:last-child {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  .rvt-button {
+    font-weight: normal;
+  }
+}
+
+@include mq($breakpoint-md) {
+  .heroes {
+    padding: $xxl;
+    .hero {
+      padding: $xxl;
+      margin: 0;
+    }
+  }
+}
+
+.intro-with-auto-toc,
+.intro-with-toc {
+  padding: $xl $xl;
+  .intro-content {
+    padding-right: $md;
+  }
+  .intro-toc {
+
+  }
+  .content {
+    color: #333333;
+  }
+  .rvt-button {
+    font-weight: normal;
+  }
+}
+
+@include mq($breakpoint-md) {
+  .intro-with-auto-toc,
+  .intro-with-toc {
+    padding: $lg $xxl;
+  }
+}
+
+.site-content-block.rvt-container {
+  padding: $xl $xl;
+}
+
+@include mq($breakpoint-md) {
+  .site-content-block.rvt-container {
+    padding: $xxl $xxl;
+  }
+}
+
+.hero-wrapper {
+  padding: $lg;
+}
+
+@include mq($breakpoint-md) {
+  .hero-wrapper {
+    padding: $xxl;
   }
 }

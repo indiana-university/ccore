@@ -5,7 +5,7 @@ SPDX-License-Identifier: BSD-3-Clause
 
 <div class="intro-with-toc rvt-container site-content-block">
     <div class="rvt-grid">
-        <div class="rvt-grid__item-12 rvt-grid__item-8-md-up">
+        <div class="intro-content rvt-grid__item-12 rvt-grid__item-8-lg-up">
             <section>
                 {% if include.heading != empty or include.subHeading1 != empty or include.subHeading1 != empty  %}
                 <header>
@@ -31,7 +31,7 @@ SPDX-License-Identifier: BSD-3-Clause
             </section>
         </div>
         <div class="intro-toc rvt-hide-md-down rvt-grid__item-4-md-up">
-            {% include {{include.toc}} content=content %}
+            {% include toc.html html=content %}
         </div>
     </div>
 </div>

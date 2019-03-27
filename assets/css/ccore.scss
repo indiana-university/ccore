@@ -7,12 +7,12 @@
 
 .ccore-home {
   background-image: url("/assets/images/background-home.png");
-  background-size: cover;
+  background-size: contain;
 }
 
 .ccore-docs {
   background-image: url("/assets/images/background-docs.png");
-  background-size: cover;
+  background-size: contain;
 }
 
 .rvt-header__main-nav {
@@ -41,18 +41,63 @@
 
 .horizontal-links {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  a, span {
-    padding: $md;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: start;
+  text-align: left;
+  &.site-content-block {
+    padding: $sm $lg;
+  }
+  span {
+    padding: $xs;
+    flex-grow: 2;
+    &:first-of-type {
+      flex-grow: 0;
+    }
   }
 }
 
+@include mq($breakpoint-md) {
+  .horizontal-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    &.site-content-block {
+      padding: 0 $xxl;
+    }
+    span {
+      padding: $md;
+    }
+  }
+}
+
+
 .quarter-details {
-  margin: 4rem 0;
+  max-width: 50em;
+  margin: 0 auto;
+  header {
+    margin-top: 0;
+  }
+}
+@include mq($breakpoint-md) {
+  .quarter-details {
+    max-width: 80em;
+    margin: 0 auto;
+  }
+}
+
+.quarterly-report-article-wrapper {
+    padding: $lg;
+}
+
+@include mq($breakpoint-md) {
+  .quarterly-report-article-wrapper {
+    padding: $xxl;
+  }
 }
 
 ul.flush-list,
@@ -71,13 +116,44 @@ ol.flush-list {
   }
 }
 
+.hero-image {
+  max-width: 270px;
+}
+
+.site-content-block {
+  max-width: 80em;
+  margin-left: auto;
+  margin-right: auto;
+
+  .rvt-button {
+    font-weight: normal;
+  }
+}
+
+.project-card {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: $md;
+  .badged-icon {
+    img {
+      padding: $xs;
+      background-color: #EDEBEB;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+    }
+  }
+}
+
 @import "components/tiny-boxes";
 @import "components/content";
 @import "components/content-block";
 @import "components/hero";
 @import "components/box-grids";
-//@import "components/intro-with-toc";
+@import "components/bodies";
 @import "components/quarterly-overview";
 @import "components/simple-table";
+@import "components/single-sourcing";
 @import "components/site-menu";
 @import "components/toc";

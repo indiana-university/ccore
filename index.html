@@ -7,94 +7,107 @@ permalink: "/"
 ---
 
 <div class="ccore-home">
-    <div class="rvt-p-all-xs rvt-p-all-xxl-md-up rvt-p-tb-xxl">
+    <div class="hero-wrapper">
         {% include components/hero.html
         subheading1="Curated content."
         subheading2="Delivered anywhere."
         content="ContentCore (CCore) is Indiana University's content repository and distribution center. Use it to
         automate your site or app's content&#8212;and know for sure that you have the latest information."
         ctaText="Learn more about CCore"
-        ctaURL="/about/overview" %}
+        ctaURL="/about" %}
     </div>
 </div>
 
-<div id="" class="rvt-bg-crimson rvt-p-all-xxl  wrapper-tiny-boxes-center">
+<div class="rvt-bg-crimson rvt-p-all-xxl">
     <article class="rvt-container rvt-container--center book-page tiny-boxes-wrapper">
-        <header>
-            <h2>SECTION HEADING</h2>
-            <p>Paragraph of text.</p>
+        <header class="rvt-text-center">
+            <h2>How it works</h2>
+            <p class="lead">What makes CCore valuable? It's the official source for official information.</p>
         </header>
 
-        <div class="rvt-grid tiny-boxes tiny-boxes__tight">
-            <div class="rvt-grid__item-12 rvt-grid__item-6-md-up">
+        <div class="rvt-grid tiny-boxes tiny-boxes__tight tiny-boxes__box--expand">
+            <div class="rvt-grid__item rvt-grid__item-12 rvt-grid__item-6-md-up">
                 {% include components/stacked-content-box-fixed-size.html
-                heading="index.html"
-                definition="index.html"
+                heading="Curated content"
+                definition="Professional teams write and maintain CCore content, keeping it up to date and usable."
+                iconName="edit"
+                altText=""
+                %}
+            </div>
+            <div class="rvt-grid__item rvt-grid__item-12 rvt-grid__item-6-md-up">
+                {% include components/stacked-content-box-fixed-size.html
+                heading="Single-sourcing"
+                definition="Each piece of CCore content lives in a central repository&mdash;no more conflicting or inconsistent information."
+                iconName="publish"
+                altText=""
+                %}
+            </div>
+        </div>
+        <div class="rvt-grid tiny-boxes tiny-boxes__tight tiny-boxes__box--expand">
+            <div class="rvt-grid__item rvt-grid__item-12 rvt-grid__item-6-md-up">
+                {% include components/stacked-content-box-fixed-size.html
+                heading="Access with APIs"
+                definition="Developers use CCore APIs to get exactly the content needed for a website or application."
                 iconName="access"
                 altText=""
                 %}
             </div>
-            <div class="rvt-grid__item-12 rvt-grid__item-6-md-up">
+            <div class="rvt-grid__item rvt-grid__item-12 rvt-grid__item-6-md-up">
                 {% include components/stacked-content-box-fixed-size.html
-                heading="index.html"
-                definition="index.html"
+                heading="A reliable content experience"
+                definition="The same official information from main Indiana University websites is shared throughout the digital campus."
                 iconName="done"
                 altText=""
                 %}
             </div>
         </div>
-        <div class="rvt-grid tiny-boxes">
-            <div class="rvt-grid__item-12 rvt-grid__item-6-md-up">
-                {% include components/stacked-content-box-fixed-size.html
-                heading="index.html"
-                definition="index.html"
-                iconName="edit"
-                altText=""
-                %}
-            </div>
-            <div class="rvt-grid__item-12 rvt-grid__item-6-md-up">
-                {% include components/stacked-content-box-fixed-size.html
-                heading="index.html"
-                definition="index.html"
-                iconName="prep"
-                altText=""
-                %}
-            </div>
-        </div>
 
+<!--
         <footer class="rvt-text-center">
             <p><a href="#LINK" class="rvt-button rvt-button--secondary inverted-button rvt-p-lr-lg">LINK</a></p>
-        </footer>
+        </footer> 
+-->
+
     </article>
 </div>
 
-<div class="rvt-p-all-xs rvt-p-all-xxl-md-up rvt-p-bottom-xxl">
+<div class="heroes">
     <div class="rvt-container--center">
         <div class="rvt-container">
             <div class="rvt-grid">
-                <div class="rvt-grid__item-12 rvt-grid__item-6-md-up rvt-p-all-xxs rvt-p-all-xxl-md-up rvt-p-top-xxl">
+                <div class="hero rvt-grid__item-12 rvt-grid__item-6-lg-up">
                     <!-- IMAGE? -->
                     {% include components/content-block.html
-                    subheading1="Curated content."
-                    subheading2="Delivered anywhere."
-                    content="ContentCore (CCore) is Indiana University's content repository and distribution center. Use
-                    it to automate your site or app's content&#8212;and know for sure that you have the latest
-                    information."
-                    ctaText="Learn more about CCore"
-                    ctaURL="/about/overview" %}
+                    subheading1="Where we are"
+                    lead="Learn about the current line-up of CCore applications, and what they can deliver for your project."
+                    ctaText="See our applications"
+                    ctaURL="/dashboard" %}
                 </div>
-                <div class="rvt-grid__item-12 rvt-grid__item-6-md-up rvt-p-all-xxs rvt-p-all-xxl-md-up rvt-p-top-xxl">
+                <div class="hero rvt-grid__item-12 rvt-grid__item-6-lg-up">
                     <!-- IMAGE? -->
                     {% include components/content-block.html
-                    subheading1="Curated content."
-                    subheading2="Delivered anywhere."
-                    content="ContentCore (CCore) is Indiana University's content repository and distribution center. Use
-                    it to automate your site or app's content&#8212;and know for sure that you have the latest
-                    information."
-                    ctaText="Learn more about CCore"
-                    ctaURL="/about/overview" %}
+                    subheading1="Where we're going"
+                    lead="See how we will take CCore into the future, our plans for new applications and new content customers."
+                    ctaText="See our roadmap"
+                    ctaURL="/roadmap" %}
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<div class="hero bg-light-grey rvt-p-all-xxl">
+
+    <article class="rvt-container rvt-container--center book-page tiny-boxes-wrapper rvt-text-center">
+        <header>
+            <h2>Got an idea?</h2>
+        </header>
+        <div class="lead">
+            <p>Is there content that you'd like to see in CCore, or a specific feature? Let us know! We'd love to hear from you.</p>
+        </div>
+        <footer class="rvt-text-center">
+            <p><a href="/contact" class="rvt-button rvt-button--secondary rvt-p-lr-lg">Contact the CCore team</a></p>
+        </footer> 
+
+    </article>
 </div>

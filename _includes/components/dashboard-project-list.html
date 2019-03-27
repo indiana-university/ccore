@@ -1,0 +1,41 @@
+{% comment %}
+Copyright (C) 2019 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+{% assign site_documentation = site.documentation %}
+{% if site_documentation.size > 0 %}
+{% assign projects = site.documentation | sort: "sortOrder" %}
+{% if projects.size > 0 %}
+{% for project in projects %}
+{% assign remainder = forloop.index | modulo:2 %}
+{% capture imagepath %}assets/images/hero-{{project.name}}.svg{% endcapture %}
+<div class="rvt-container rvt-m-tb-xl rvt-p-lr-sm">
+    <div class="rvt-grid project-card">
+        <div class="rvt-grid__item-12 rvt-grid__item-1-md-up">
+            <span class="badged-icon">
+            {% include components/image.html src=imagepath %}
+            </span>
+        </div>
+        <div class="rvt-grid__item-12 rvt-grid__item-11-md-up">
+            <article class="rvt-p-left-md-md-up" id="{{project.name | slugify | default: forloop.index }}">
+                <header class="rvt-m-top-lg rvt-m-top-none-md-up">
+                    <h3>{{ project.fullName }}</h3>
+                </header>
+                {{ project.shortContent | markdownify }}
+                <div>
+                    <p class="rvt-m-all-remove">
+                        <a href="{{project.startURL}}" class="rvt-button rvt-m-right-xs rvt-m-bottom-md rvt-m-top-none">{{project.startText}}</a>
+                        <a href="{{project.docsURL}}" class="rvt-button rvt-button--secondary rvt-m-bottom-md rvt-m-top-none">{{project.docsText}}</a></p>
+                    <p class="rvt-m-all-remove">
+                        <a href="{{project.moreURL}}">{{project.moreText}}</a>
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+{% endif %}
+
