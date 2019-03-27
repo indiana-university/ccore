@@ -7,9 +7,9 @@ SPDX-License-Identifier: BSD-3-Clause
 {% assign infoName = info.name | capitalize %}
 {% assign pageName = page.name | capitalize %}
 {% assign name = include.name | default: infoName | default: pageName %}
-<div class="rvt-p-lr-xxl-md-up rvt-p-tb-md-md-up rvt-p-lr-sm rvt-p-tb-sm intro-with-toc rvt-container">
-    <div class="rvt-grid rvt-p-lr-xxl-md-up rvt-p-lr-md">
-        <div class="rvt-grid__item-12 rvt-grid__item-8-md-up rvt-p-lr-xxl">
+<div class="intro-with-toc rvt-container site-content-block">
+    <div class="rvt-grid">
+        <div class="rvt-grid__item-12 rvt-grid__item-8-md-up">
             <section id="module-{{page.name | downcase}}">
                 {% if name != empty or info.subheading1 != empty or info.subheading2 != empty  %}
                 <header>
@@ -36,8 +36,8 @@ SPDX-License-Identifier: BSD-3-Clause
                 {% endif %}
             </section>
         </div>
-        <div class="hide-md-down rvt-grid__item-4-md-up">
-            {% include components/image.html src=info.logoURL alttext=info.logoAltText %}
+        <div class="hide-md-down rvt-grid__item-4-md-up rvt-text-right">
+            {% include components/image.html src=info.logoURL alttext=info.logoAltText classes="hero-image" %}
         </div>
     </div>
 </div>

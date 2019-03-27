@@ -22,32 +22,63 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, .h1 {
   margin-top: 1em;
-  font-size: $h1-fs;
+  font-size: $ts-36;
 }
 
 h2, .h2 {
-  font-size: $h2-fs;
+  font-size: $ts-32;
 }
 
 h3, .h3 {
-  font-size: $h3-fs;
+  font-size: $ts-29;
 }
 
 h4, .h4 {
-  font-size: $h4-fs;
+  font-size: $ts-26;
 }
 
 h5, .h5 {
-  font-size: $h5-fs;
+  font-size: $ts-23;
 }
 
 h6, .h6 {
-  font-size: $h6-fs;
+  font-size: $ts-20;
+}
+
+@include mq($breakpoint-md) {
+  body {
+    font-size: $ts-16;
+  }
+
+  h1, .h1 {
+    margin-top: 1em;
+    font-size: $ts-41;
+  }
+
+  h2, .h2 {
+    font-size: $ts-36;
+  }
+
+  h3, .h3 {
+    font-size: $ts-32;
+  }
+
+  h4, .h4 {
+    font-size: $ts-29;
+  }
+
+  h5, .h5 {
+    font-size: $ts-26;
+  }
+
+  h6, .h6 {
+    font-size: $ts-23;
+  }
 }
 
 .base-body {
   header {
-    margin-top: 2em;
+    margin-top: 0;
     margin-bottom: 1em;
 
     h1, h2, h3, h4, h5, h6 {
@@ -64,39 +95,13 @@ h6, .h6 {
     margin-bottom: .5em;
   }
 
-  h1, .h1 {
-    font-size: $ts-32;
-  }
-
-  h2, .h2 {
-    font-size: $ts-29;
-  }
-
-  h3, .h3 {
-    font-size: $ts-26;
-  }
-
-  h4, .h4 {
-    font-size: $ts-23;
-  }
-
-  h5, .h5 {
-    font-size: $ts-20;
-  }
-
-  h6, .h6 {
-    font-size: $ts-20;
-    font-style: italic;
-    font-weight: normal;
-  }
-
   header {
     margin-top: $lg;
     margin-bottom: $lg;
 
     h1, h2, h3, h4, h5, h6 {
       margin-top: 0;
-      margin-bottom: 0;
+      margin-bottom: $xs;
     }
   }
   .book-page {
@@ -128,7 +133,28 @@ header {
   font-size: $ts-23;
   color: $color-black--700;
   line-height: $ts-32;
-  margin: $xl 0;
+  margin: $xs 0 $xl 0;
   padding-bottom: $lg;
-  border-bottom: 1px solid $color-black--200;
 }
+
+div.lead {
+  margin: 0;
+  padding: 0;
+  p {
+    font-size: $ts-23;
+    color: $color-black--700;
+    line-height: $ts-32;
+    margin: $xs 0 $xl 0;
+    padding-bottom: 0;
+  }
+}
+
+.content {
+  padding: 0;
+  margin: 0;
+  p {
+    padding: 1em 0;
+    margin: 1em 0;
+  }
+}
+

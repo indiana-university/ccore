@@ -3,4 +3,8 @@ Copyright (C) 2019 The Trustees of Indiana University
 SPDX-License-Identifier: BSD-3-Clause
 {% endcomment %}
 
+{% if include.classes %}
+<img src="{{include.src}}" alt="{{include.altText}}" width="100%" class="{{include.classes}}" />
+{% else %}
 <img src="{{include.src}}" alt="{{include.altText}}" width="100%" />
+{% endif%}

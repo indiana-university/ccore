@@ -2,27 +2,20 @@
 // SPDX-License-Identifier: BSD-3-Clause
 
 .quarterly-overview {
-
   header {
     h1, h2, h3, h4, h5, h6 {
-      font-size: $h3-fs;
-      font-weight: $h3-fs;
-      line-height: $h3-lh;
       text-align: center;
       margin-bottom: 2em;
     }
   }
 
   .simple-table {
-
     table {
-
       thead {
         tr {
           border-bottom: 1px solid #fff;
         }
       }
-
       tbody {
         tr {
           border-bottom: 1px solid #fff;
@@ -31,4 +24,3 @@
     }
   }
 }
-

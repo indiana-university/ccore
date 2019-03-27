@@ -1,14 +1,22 @@
 ---
 layout: docs
 name: modulename
-published: true
+fullName: CCore Modulename
+published: false
 subHeading1:
 subHeading2:
 lead:
+shortContent:
 ctaText:
 ctaURL:
 logoURL:
 logoAltText:
+startURL:
+startText: Start using Modulename
+docsURL:
+docsText: Access the Services API
+moreURL:
+moreText: Or, learn about Services
 sortOrder: #
 ---
 {% comment %}

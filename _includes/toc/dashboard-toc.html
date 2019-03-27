@@ -3,11 +3,17 @@ Copyright (C) 2019 The Trustees of Indiana University
 SPDX-License-Identifier: BSD-3-Clause
 {% endcomment %}
 
+{% assign site_documentation = site.documentation %}
+{% if site_documentation.size > 0 %}
+{% assign projects = site.documentation | sort: "sortOrder" %}
+{% if projects.size > 0 %}
 <nav class="toc-side">
     <h3>On this page</h3>
     <ul>
-        <li><a href="#quarterly-overview">API Documentation</a></li>
-        <li><a href="#code">Code?</a></li>
-        <li><a href="#code">Examples</a></li>
+        {% for project in projects %}
+        <li><a href="#{{project.name | slugify | default: forloop.index }}">{{ project.fullName }}</a></li>
+        {% endfor %}
     </ul>
 </nav>
+{% endif %}
+{% endif %}
