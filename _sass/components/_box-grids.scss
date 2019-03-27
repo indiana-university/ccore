@@ -1,0 +1,34 @@
+// Copyright (C) 2019 The Trustees of Indiana University
+// SPDX-License-Identifier: BSD-3-Clause
+
+.centered-box-grid {
+  header {
+    h1,h2,h3,h4,h5,h6 {
+      text-align: center;
+      font-size: $ts-29;
+    }
+    p {
+      font-size: $ts-20;
+      font-family: "BentonSans", "Helvetica Neue", "Helvetica", "sans-serif";
+      font-weight: lighter;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+  }
+}
+
+.left-box-grid {
+  header {
+    h1,h2,h3,h4,h5,h6 {
+      text-align: left;
+      font-size: $ts-29;
+    }
+    p {
+      font-size: $ts-20;
+      font-family: "BentonSans", "Helvetica Neue", "Helvetica", "sans-serif";
+      font-weight: lighter;
+      text-align: left;
+      letter-spacing: 0.01em;
+    }
+  }
+}

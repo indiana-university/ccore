@@ -1,0 +1,20 @@
+---
+# Copyright (C) 2019 The Trustees of Indiana University
+# SPDX-License-Identifier: BSD-3-Clause
+layout: docs-shell-content-wrapper
+---
+
+{% assign component = site.components | where:'name', page.name | first %}
+{% assign docs = site.documentation | where:'name', page.name %}
+
+{% for doc in docs %}
+{% capture heading %}What is {{ doc.name | capitalize }}?{% endcapture %}
+{% capture content %}{{ component.content }}{% endcapture %}
+
+{% include docs/docs_info.html heading=heading name=name content=content %}
+
+{% capture body-template %}/docs/{{ doc.name }}-body.html{% endcapture %}
+
+{% include {{body-template}} heading=heading name=name %}
+
+{% endfor %}

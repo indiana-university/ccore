@@ -1,0 +1,21 @@
+
+.single-sourcing {
+  header {
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+      margin: 0;
+    }
+  }
+  .ss-icon {
+    max-height: 60px;
+    margin: 2em 0;
+  }
+}
+
+@include mq($breakpoint-md) {
+  .single-sourcing {
+    .ss-icon-md-up {
+      max-height: 140px;
+    }
+  }
+}

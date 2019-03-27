@@ -1,0 +1,28 @@
+---
+layout: docs
+name: modulename
+fullName: CCore Modulename
+published: false
+subHeading1:
+subHeading2:
+lead:
+shortContent:
+ctaText:
+ctaURL:
+logoURL:
+logoAltText:
+startURL:
+startText: Start using Modulename
+docsURL:
+docsText: Access the Services API
+moreURL:
+moreText: Or, learn about Services
+sortOrder: #
+---
+{% comment %}
+Copyright (C) 2019 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+This is a template for documentation/component pages.
+
