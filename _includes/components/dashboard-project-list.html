@@ -20,7 +20,7 @@ SPDX-License-Identifier: BSD-3-Clause
         <div class="rvt-grid__item-12 rvt-grid__item-11-md-up">
             <article class="rvt-p-left-md-md-up" id="{{project.name | slugify | default: forloop.index }}">
                 <header class="rvt-m-top-lg rvt-m-top-none-md-up">
-                    <h3>{{ project.fullName }} or {{project.name | capitalize }}</h3>
+                    <h3>{{ project.fullName }}</h3>
                 </header>
                 {{ project.shortContent | markdownify }}
                 <div>
