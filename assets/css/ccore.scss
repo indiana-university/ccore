@@ -7,13 +7,26 @@
 
 .ccore-home {
   background-image: url("/assets/images/background-home.png");
-  background-size: contain;
+  background-size: 300%;
 }
 
 .ccore-docs {
   background-image: url("/assets/images/background-docs.png");
-  background-size: contain;
+  background-size: 300%;
 }
+
+@include mq($breakpoint-md) {
+  .ccore-home {
+    background-image: url("/assets/images/background-home.png");
+    background-size: 150%;
+  }
+
+  .ccore-docs {
+    background-image: url("/assets/images/background-docs.png");
+    background-size: 150%;
+  }
+}
+
 
 .rvt-header__main-nav {
   margin-right: 1.5rem;
@@ -136,12 +149,13 @@ ol.flush-list {
   border-radius: 10px;
   padding: $md;
   .badged-icon {
+    display: block;
+    background-color: #EDEBEB;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
     img {
       padding: $xs;
-      background-color: #EDEBEB;
-      height: 50px;
-      width: 50px;
-      border-radius: 50%;
     }
   }
 }
